@@ -4,6 +4,7 @@ import DetailScreen from '../screens/details/DetailScreen';
 
 export type RootStackParams = {
     Home: undefined,
+    Details: { movieId: number }
 }
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -14,6 +15,7 @@ export const Navigation = () => {
             headerShown: false
         }}>
             <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Details" component={DetailScreen} />
         </Stack.Navigator>
     );
 }
